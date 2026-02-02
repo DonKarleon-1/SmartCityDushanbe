@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCityDushanbe</title>
+    <link rel="stylesheet" href="../mainPage.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-up">
+            <div class="header-logo">
+                <a href="mainPage.html">
+                    <img src="./img/icon/logoSmartCity.png" alt="SmartCityDushanbe" loading="lazy">
+                </a>
+            </div>
+
+            <nav class="header-menu">
+                <div class="header-language-toggle">
+                    <button>Точики</button>
+                    <button>Русский</button>
+                    <button>English</button>
+                </div>
+
+                <div class="header-text-size">
+                    <button class="text-size">Aa</button>
+                </div>
+
+                <div class="header-socials">
+                    <a href="" class="header-social">
+                        <img src="./img/icon/iconTelegram.svg" alt="Telegram" width="27" height="27" loading="lazy">
+                    </a>
+                    <a href="" class="header-social">
+                        <img src="./img/icon/iconFacebook.svg" alt="Facebook" width="30" height="30" loading="lazy">
+                    </a>    
+                    <a href="" class="header-social">
+                        <img src="./img/icon/iconLinkedin.svg" alt="LinkedIn" width="27" height="27" loading="lazy">
+                    </a>
+                </div>
+
+                <div class="header-input">
+                    <input type="text">
+                    <img src="./img/icon/icon-search.svg" alt="" width="20" height="20" loading="lazy">
+                </div>
+
+                <div class="themes">
+                    <svg width="26px" height="26px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"/><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/><g id="SVGRepo_iconCarrier"> <path d="M12 22C17.5228 22 22 17.5228 22 12C22 11.5373 21.3065 11.4608 21.0672 11.8568C19.9289 13.7406 17.8615 15 15.5 15C11.9101 15 9 12.0899 9 8.5C9 6.13845 10.2594 4.07105 12.1432 2.93276C12.5392 2.69347 12.4627 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#000"/> </g></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="26px" height="26px" fill-rule="nonzero"><g fill="black" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(9.84615,9.84615)"><path d="M12.90625,-0.03125c-0.04297,0.00781 -0.08594,0.01953 -0.125,0.03125c-0.46484,0.10547 -0.79297,0.52344 -0.78125,1v3c-0.00391,0.35938 0.18359,0.69531 0.49609,0.87891c0.3125,0.17969 0.69531,0.17969 1.00781,0c0.3125,-0.18359 0.5,-0.51953 0.49609,-0.87891v-3c0.01172,-0.28906 -0.10547,-0.56641 -0.3125,-0.76172c-0.21094,-0.19922 -0.49609,-0.29687 -0.78125,-0.26953zM6.84375,1.59375c-0.33203,0.04688 -0.61719,0.25781 -0.76172,0.55859c-0.14453,0.30078 -0.12891,0.65234 0.04297,0.94141l1.5,2.625c0.27734,0.48438 0.89063,0.65234 1.375,0.375c0.48438,-0.27734 0.65234,-0.89062 0.375,-1.375l-1.5,-2.625c-0.20312,-0.36719 -0.61719,-0.56641 -1.03125,-0.5zM18.8125,1.59375c-0.29297,0.05469 -0.54297,0.23828 -0.6875,0.5l-1.5,2.625c-0.27734,0.48438 -0.10937,1.09766 0.375,1.375c0.48438,0.27734 1.09766,0.10938 1.375,-0.375l1.5,-2.625c0.19141,-0.32422 0.18359,-0.73047 -0.02344,-1.04687c-0.20312,-0.31641 -0.57031,-0.49219 -0.94531,-0.45312c-0.03125,0 -0.0625,0 -0.09375,0zM23.34375,5.96875c-0.03125,0.00781 -0.0625,0.01953 -0.09375,0.03125c-0.12109,0.01953 -0.23828,0.0625 -0.34375,0.125l-2.625,1.5c-0.48437,0.27734 -0.65234,0.89063 -0.375,1.375c0.27734,0.48438 0.89063,0.65234 1.375,0.375l2.625,-1.5c0.46875,-0.19922 0.71484,-0.71484 0.57031,-1.20312c-0.14453,-0.48828 -0.63281,-0.79297 -1.13281,-0.70312zM2.4375,6c-0.43359,0.05469 -0.77734,0.38281 -0.85937,0.8125c-0.07812,0.42969 0.13281,0.85938 0.51563,1.0625l2.625,1.5c0.48438,0.27734 1.09766,0.10938 1.375,-0.375c0.27734,-0.48437 0.10938,-1.09766 -0.375,-1.375l-2.625,-1.5c-0.19922,-0.11719 -0.42969,-0.16016 -0.65625,-0.125zM13,6c-3.86719,0 -7,3.13281 -7,7c0,3.86719 3.13281,7 7,7c3.86719,0 7,-3.13281 7,-7c0,-3.86719 -3.13281,-7 -7,-7zM13,8c2.75781,0 5,2.24219 5,5c0,2.75781 -2.24219,5 -5,5c-2.75781,0 -5,-2.24219 -5,-5c0,-2.75781 2.24219,-5 5,-5zM0.71875,12c-0.55078,0.07813 -0.9375,0.58984 -0.85937,1.14063c0.07813,0.55078 0.58984,0.9375 1.14063,0.85938h3c0.35938,0.00391 0.69531,-0.18359 0.87891,-0.49609c0.17969,-0.3125 0.17969,-0.69531 0,-1.00781c-0.18359,-0.3125 -0.51953,-0.5 -0.87891,-0.49609h-3c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0zM21.71875,12c-0.55078,0.07813 -0.9375,0.58984 -0.85937,1.14063c0.07813,0.55078 0.58984,0.9375 1.14063,0.85938h3c0.35938,0.00391 0.69531,-0.18359 0.87891,-0.49609c0.17969,-0.3125 0.17969,-0.69531 0,-1.00781c-0.18359,-0.3125 -0.51953,-0.5 -0.87891,-0.49609h-3c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0zM5.15625,16.46875c-0.03125,0.00781 -0.0625,0.01953 -0.09375,0.03125c-0.12109,0.01953 -0.23828,0.0625 -0.34375,0.125l-2.625,1.5c-0.48437,0.27734 -0.65234,0.89063 -0.375,1.375c0.27734,0.48438 0.89063,0.65234 1.375,0.375l2.625,-1.5c0.46875,-0.19922 0.71484,-0.71484 0.57031,-1.20312c-0.14453,-0.48828 -0.63281,-0.79297 -1.13281,-0.70312zM20.625,16.5c-0.43359,0.05469 -0.77734,0.38281 -0.85937,0.8125c-0.07812,0.42969 0.13281,0.85938 0.51563,1.0625l2.625,1.5c0.48438,0.27734 1.09766,0.10938 1.375,-0.375c0.27734,-0.48437 0.10938,-1.09766 -0.375,-1.375l-2.625,-1.5c-0.19922,-0.11719 -0.42969,-0.16016 -0.65625,-0.125zM8.3125,19.78125c-0.29297,0.05469 -0.54297,0.23828 -0.6875,0.5l-1.5,2.625c-0.27734,0.48438 -0.10937,1.09766 0.375,1.375c0.48438,0.27734 1.09766,0.10938 1.375,-0.375l1.5,-2.625c0.19141,-0.32422 0.18359,-0.73047 -0.02344,-1.04687c-0.20312,-0.31641 -0.57031,-0.49219 -0.94531,-0.45312c-0.03125,0 -0.0625,0 -0.09375,0zM17.34375,19.78125c-0.33203,0.04688 -0.61719,0.25781 -0.76172,0.55859c-0.14453,0.30078 -0.12891,0.65234 0.04297,0.94141l1.5,2.625c0.27734,0.48438 0.89063,0.65234 1.375,0.375c0.48438,-0.27734 0.65234,-0.89062 0.375,-1.375l-1.5,-2.625c-0.20312,-0.36719 -0.61719,-0.56641 -1.03125,-0.5zM12.90625,20.96875c-0.04297,0.00781 -0.08594,0.01953 -0.125,0.03125c-0.46484,0.10547 -0.79297,0.52344 -0.78125,1v3c-0.00391,0.35938 0.18359,0.69531 0.49609,0.87891c0.3125,0.17969 0.69531,0.17969 1.00781,0c0.3125,-0.18359 0.5,-0.51953 0.49609,-0.87891v-3c0.01172,-0.28906 -0.10547,-0.56641 -0.3125,-0.76172c-0.21094,-0.19922 -0.49609,-0.29687 -0.78125,-0.26953z"></path></g></g></svg>
+                </div>
+            </nav>
+        </div>
+
+        <div class="header-bottom">
+            <nav class="header-bottom-menu">
+                <ul class="header-menu-list">
+                    <li class="header-menu-item">
+                        <a href="mainPage.html">Главная</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="administration.html">О нас</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="#">Умный Город</a>
+                        <ul>
+                            <li><a href="">Электронное правительство</a></li>
+                            <li><a href="#">Умная экология</a></li>
+                            <li><a href="#">Умный дом</a></li>
+                            <li><a href="#">Цифровая экономика</a></li>
+                            <li><a href="#">Умная безопасность</a></li>
+                            <li><a href="#">Умный транспорт</a></li>
+                            <li><a href="#">Умная энергия</a></li>
+                            <li><a href="#">Умная медицина</a></li>
+                            <li><a href="#">Цифровое образование</a></li>
+                            <li><a href="#">IT Park</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="header-menu-item">
+                        <a href="#">Душанбе</a>
+                        <ul>
+                            <li><a href="districtSino.html">Район Сино</a></li>
+                            <li><a href="districtFirdavsi.html">Район Фирдавси</a></li>
+                            <li><a href="districtIsmoiliSomoni.html">Район Исмаили Сомони</a></li>
+                            <li><a href="districtShohmansur.html">Район Шохмансур</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="#">Новости</a>
+                        <ul>
+                            <li><a href="">Мероприятия</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="#">Постановления</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="#">Отзывы и пожелания</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="content">
+        <section class="section-news">
+            <div class="card-primary">
+                <div>
+                    <img src="./img/presidentEmomaliRahmon.jpg" alt="President of Tajikistan Emomali Rahmon" loading="lazy">
+                </div>
+                <h6>ПОСТАНОВЛЕНИЕ <br/>
+                ПРАВИТЕЛЬСТВА РЕСПУБЛИКИ ТАДЖИКИСТАН</h6>
+                <img class="image-arms" src="./img/Nishon.png" alt="Нишон" loading="lazy">
+                <div class="button-card">
+                    <button class="button button-information">ПОДРОБНЕЕ</button>
+                </div>
+                
+            </div>
+            <div class="card-main">
+                <div>
+                    <img src="./img/meeting.jpg" alt="">
+                </div>
+                <div class="title">
+                    <h3>В Управлении МВД в городе Душанбе и с ответственными лицами Центров «Безопасный город» и «Умный город» состоялось рабочее совещание</h3>
+                    <p>В рамках поручений и указаний Председателя города Душанбе, уважаемого…</p>
+                </div>
+                <div class="button-card">
+                    <button class="button button-information">ПОДРОБНЕЕ</button>
+                </div>
+            </div>
+            <div class="card-primary">
+                <img src="img/MayorRustamiEmomali.jpg" alt="">
+                <h6>ПОСТАНОВЛЕНИЕ <br/>
+                ПРЕДСЕДАТЕЛЬ ГОРОДА ДУШАНБЕ</h6>
+                <img class="image-arms" src="./img/dush_crest-1.png">
+                <div class="button-card">
+                    <button class=" button button-information">ПОДРОБНЕЕ</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section class="mini-news">
+            <div>
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <h3></h3>
+                </div>
+                <data value=""></data>
+            </div>
+        </section>
+
+        <section class="smart-city">
+            <div class="smart-categories">
+                <div class="circle">
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="subtitle">
+                <p>Умный Транспорт</p>
+            </div>
+            </div>
+            <div class="smart-categories">
+                <div class="circle">
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="subtitle">
+                <p>Умная энергия</p>
+            </div>
+            </div>
+            <div class="smart-categories">
+                <div class="circle">
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="subtitle">
+                <p>Умная медицина</p>
+            </div>
+            </div>
+            <div class="smart-categories">
+                <div class="circle">
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="subtitle">
+                <p>Электронное правительство</p>
+            </div>
+            </div>
+            <div class="smart-categories">
+                <div class="circle">
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="subtitle">
+                <p>Умный дом</p>
+            </div>
+            </div>
+            <div class="smart-categories">
+                <div class="circle">
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="subtitle">
+                <p>Цифровая экономика</p>
+            </div>
+            </div>
+            <div class="smart-categories">
+                <div class="circle">
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="subtitle">
+                <p>Умная безопасность</p>
+            </div>
+            </div>
+            <div class="smart-categories">
+                <div class="circle">
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="subtitle">
+                <p>Умная экология</p>
+            </div>
+            </div>
+            <div class="smart-categories">
+                <div class="circle">
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="subtitle">
+                <p>Цифровое образование</p>
+            </div>
+            </div>
+            <div class="smart-categories">
+                <div class="circle">
+                <div>
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="subtitle">
+                <p>Умный Транспорт</p>
+            </div>
+            </div>
+        </section>
+
+        <section class="image-city">
+            <img src="./img/skyline.png" alt="">
+        </section>
+
+        <h1 class="section-title">Наши Партнеры</h1>
+        <section class="partners">
+            <div class="partners-card">
+                <a href="https://prezident.tj/">
+                    <img src="./img/partners/presidenttj.png" alt="">
+                </a>
+                <a href="https://dushanbe.tj/">
+                    <img src="./img/partners/МИХДШД.jpg" alt="">
+                </a>
+                <a href="https://khovar.tj/">
+                    <img src="./img/partners/khovar.png" alt="">
+                </a>
+                <a href="https://mvd.tj/">
+                    <img src="./img/partners/mvd.jpg" alt="">
+                </a>
+                <a href="https://www.barqitojik.tj/">
+                    <img src="./img/partners/Barqi_tojik.jpg" alt="">
+                </a>
+                <a href="https://www.maorif.tj/">
+                    <img src="./img/partners/VazoratiMaorif.png" alt="">
+                </a>
+                <a href="https://tajtrade.tj/?l=ru">
+                    <img src="./img/partners/TorgoviPortal.png" alt="">
+                </a>
+                <a href="http://youth.tj/">
+                    <img src="./img/partners/Kumitai-Kor-Bo-Javonon.jpg" alt="">
+                </a>
+                <a href="https://dushanbe-travel.tj/">
+                    <img src="./img/partners/Tourism.jpg" alt="">
+                </a>
+                <a href="https://reklamai-beruni.tj/index.php/tj/">
+                    <img src="./img/partners/reklamai-beruni.tj_.png" alt="">
+                </a>
+                <a href="https://mfa.tj/">
+                    <img src="./img/partners/vaz-kor-khor-jt.jpg" alt="">
+                </a>
+                <a href="https://www.medt.tj/ru/">
+                    <img src="./img/partners/vaz-rash-iq-va-sav-jt.jpg" alt="">
+                </a>
+                <a href="https://egov.tj/site/innovation?lang=tg">
+                    <img src="./img/partners/нац-инов-инт-пор.jpg" alt="">
+                </a>
+                <a href="https://majmilli.tj/">
+                    <img src="./img/partners/maj-vil-maj-ol-jt.jpg" alt="">
+                </a>
+                <a href="https://sadoimardum.tj/">
+                    <img src="./img/partners/sadoi-mardum.jpg" alt="">
+                </a>
+                <a href="https://nbt.tj/tj/">
+                    <img src="./img/partners/tats-bank-taj.jpg" alt="">
+                </a>
+                <a href="https://consular.tj/">
+                    <img src="./img/partners/sarr-kons.jpg" alt="">
+                </a>
+                <a href="https://traveltajikistan.tj/">
+                    <img src="./img/partners/trev-taj.jpg" alt="">
+                </a>
+                <a href="https://www.mintrans.tj/ru">
+                    <img src="./img/partners/vaz-naq-jt.jpg" alt="">
+                </a>
+                
+                 <a href="https://prezident.tj/">
+                    <img src="./img/partners/presidenttj.png" alt="">
+                </a>
+                <a href="https://dushanbe.tj/">
+                    <img src="./img/partners/МИХДШД.jpg" alt="">
+                </a>
+                <a href="https://khovar.tj/">
+                    <img src="./img/partners/khovar.png" alt="">
+                </a>
+                <a href="https://mvd.tj/">
+                    <img src="./img/partners/mvd.jpg" alt="">
+                </a>
+                <a href="https://www.barqitojik.tj/">
+                    <img src="./img/partners/Barqi_tojik.jpg" alt="">
+                </a>
+                <a href="https://www.maorif.tj/">
+                    <img src="./img/partners/VazoratiMaorif.png" alt="">
+                </a>
+                <a href="https://tajtrade.tj/?l=ru">
+                    <img src="./img/partners/TorgoviPortal.png" alt="">
+                </a>
+                <a href="http://youth.tj/">
+                    <img src="./img/partners/Kumitai-Kor-Bo-Javonon.jpg" alt="">
+                </a>
+                <a href="https://dushanbe-travel.tj/">
+                    <img src="./img/partners/Tourism.jpg" alt="">
+                </a>
+                <a href="https://reklamai-beruni.tj/index.php/tj/">
+                    <img src="./img/partners/reklamai-beruni.tj_.png" alt="">
+                </a>
+                <a href="https://mfa.tj/">
+                    <img src="./img/partners/vaz-kor-khor-jt.jpg" alt="">
+                </a>
+                <a href="https://www.medt.tj/ru/">
+                    <img src="./img/partners/vaz-rash-iq-va-sav-jt.jpg" alt="">
+                </a>
+                <a href="https://egov.tj/site/innovation?lang=tg">
+                    <img src="./img/partners/нац-инов-инт-пор.jpg" alt="">
+                </a>
+                <a href="https://majmilli.tj/">
+                    <img src="./img/partners/maj-vil-maj-ol-jt.jpg" alt="">
+                </a>
+                <a href="https://sadoimardum.tj/">
+                    <img src="./img/partners/sadoi-mardum.jpg" alt="">
+                </a>
+                <a href="https://nbt.tj/tj/">
+                    <img src="./img/partners/tats-bank-taj.jpg" alt="">
+                </a>
+                <a href="https://consular.tj/">
+                    <img src="./img/partners/sarr-kons.jpg" alt="">
+                </a>
+                <a href="https://traveltajikistan.tj/">
+                    <img src="./img/partners/trev-taj.jpg" alt="">
+                </a>
+                <a href="https://www.mintrans.tj/ru">
+                    <img src="./img/partners/vaz-naq-jt.jpg" alt="">
+                </a>
+            </div>
+        </section>
+
+        <section class="our-partners">
+            <div class="our-partners-card">
+                <a href="https://avesto.tj/">
+                    <img src="img/partners-2/Avesto.jpg" alt="">
+                </a>
+                <a href="https://avesto.tj/pages/8">
+                    <img src="img/partners-2/AvestoNet.jpg" alt="">
+                </a>
+                <a href="http://www.koshuma.or.kr/">
+                    <img src="img/partners-2/koshuma.jpg" alt="">
+                </a>
+                <a href="https://zet-mobile.com/">
+                    <img src="img/partners-2/zet-mobile.jpg" alt="">
+                </a>
+                <a href="https://www.vsemirnyjbank.org/ext/ru/country/tajikistan">
+                    <img src="img/partners-2/TheWorldBank.jpg" alt="">
+                </a>
+                <a href="https://www.jica.go.jp/russian/overseas/tajikistan/office/about/about.html">
+                    <img src="img/partners-2/Jica.jpg" alt="">
+                </a>
+                <a href="https://www.ebrd.com/ru/home.html">
+                    <img src="img/partners-2/EuroBank.jpg" alt="">
+                </a>
+                <a href="https://ilmhona.org/">
+                    <img src="img/partners-2/ilmhona.jpg" alt="">
+                </a>
+                <a href="https://www.tcell.tj/ru">
+                    <img src="img/partners-2/Tcell.jpg" alt="">
+                </a>
+                <a href="https://eabr.org/">
+                    <img src="img/partners-2/Евразийский-банк-развития.jpg" alt="">
+                </a>
+                <a href="https://efsd.org/">
+                    <img src="img/partners-2/Евразийский-фонд-стабилизации-и-развития.png" alt="">
+                </a>
+                <a href="https://www.adb.org/">
+                    <img src="img/partners-2/ADB.png" alt="">
+                </a>
+                <a href="https://www.osce.org/">
+                    <img src="img/partners-2/OSCE.png" alt="">
+                </a>
+                <a href="https://www.undp.org/">
+                    <img src="img/partners-2/UNDP.png" alt="">
+                </a>
+                <a href="https://tika.gov.tr/en/">
+                    <img src="img/partners-2/TIKA.png" alt="">
+                </a>
+                <a href="https://cci.tj/">
+                    <img src="img/partners-2/Torgovo-promish-palata.jpg" alt="">
+                </a>
+                <a href="https://babilon-m.tj/">
+                    <img src="img/partners-2/Babilon-mobile.jpg" alt="">
+                </a>
+                <a href="https://babilon-t.com/">
+                    <img src="img/partners-2/Babilon-T.jpg" alt="">
+                </a>
+                <a href="https://www.megafon.tj/">
+                    <img src="img/partners-2/Megafon.jpg" alt="">
+                </a>
+                <a href="https://www.dai.com/">
+                    <img src="img/partners-2/dai.jpg" alt="">
+                </a>
+                <a href="https://european-union.europa.eu/index_en?prefLang=ru">
+                    <img src="img/partners-2/European-union.jpg" alt="">
+                </a>
+                <a href="https://www.giz.de/en">
+                    <img src="img/partners-2/giz.jpg" alt="">
+                </a>
+                <a href="https://tajinvest.tj/">
+                    <img src="img/partners-2/TajInvest.jpg" alt="">
+                </a>
+                <a href="https://www.ukaiddirect.org/">
+                    <img src="img/partners-2/ukaid.jpg" alt="">
+                </a>
+                <a href="https://vatan-ict.tj/#up">
+                    <img src="img/partners-2/Vatan-Ikt.jpg" alt="">
+                </a>
+                <a href="https://akf.org/">
+                    <img src="img/partners-2/AGA-KHAN-FOUNDATION.jpg" alt="">
+                </a>
+
+                <a href="https://avesto.tj/">
+                    <img src="img/partners-2/Avesto.jpg" alt="">
+                </a>
+                <a href="https://avesto.tj/pages/8">
+                    <img src="img/partners-2/AvestoNet.jpg" alt="">
+                </a>
+                <a href="http://www.koshuma.or.kr/">
+                    <img src="img/partners-2/koshuma.jpg" alt="">
+                </a>
+                <a href="https://zet-mobile.com/">
+                    <img src="img/partners-2/zet-mobile.jpg" alt="">
+                </a>
+                <a href="https://www.vsemirnyjbank.org/ext/ru/country/tajikistan">
+                    <img src="img/partners-2/TheWorldBank.jpg" alt="">
+                </a>
+                <a href="https://www.jica.go.jp/russian/overseas/tajikistan/office/about/about.html">
+                    <img src="img/partners-2/Jica.jpg" alt="">
+                </a>
+                <a href="https://www.ebrd.com/ru/home.html">
+                    <img src="img/partners-2/EuroBank.jpg" alt="">
+                </a>
+                <a href="https://ilmhona.org/">
+                    <img src="img/partners-2/ilmhona.jpg" alt="">
+                </a>
+                <a href="https://www.tcell.tj/ru">
+                    <img src="img/partners-2/Tcell.jpg" alt="">
+                </a>
+                <a href="https://eabr.org/">
+                    <img src="img/partners-2/Евразийский-банк-развития.jpg" alt="">
+                </a>
+                <a href="https://efsd.org/">
+                    <img src="img/partners-2/Евразийский-фонд-стабилизации-и-развития.png" alt="">
+                </a>
+                <a href="https://www.adb.org/">
+                    <img src="img/partners-2/ADB.png" alt="">
+                </a>
+                <a href="https://www.osce.org/">
+                    <img src="img/partners-2/OSCE.png" alt="">
+                </a>
+                <a href="https://www.undp.org/">
+                    <img src="img/partners-2/UNDP.png" alt="">
+                </a>
+                <a href="https://tika.gov.tr/en/">
+                    <img src="img/partners-2/TIKA.png" alt="">
+                </a>
+                <a href="https://cci.tj/">
+                    <img src="img/partners-2/Torgovo-promish-palata.jpg" alt="">
+                </a>
+                <a href="https://babilon-m.tj/">
+                    <img src="img/partners-2/Babilon-mobile.jpg" alt="">
+                </a>
+                <a href="https://babilon-t.com/">
+                    <img src="img/partners-2/Babilon-T.jpg" alt="">
+                </a>
+                <a href="https://www.megafon.tj/">
+                    <img src="img/partners-2/Megafon.jpg" alt="">
+                </a>
+                <a href="https://www.dai.com/">
+                    <img src="img/partners-2/dai.jpg" alt="">
+                </a>
+                <a href="https://european-union.europa.eu/index_en?prefLang=ru">
+                    <img src="img/partners-2/European-union.jpg" alt="">
+                </a>
+                <a href="https://www.giz.de/en">
+                    <img src="img/partners-2/giz.jpg" alt="">
+                </a>
+                <a href="https://tajinvest.tj/">
+                    <img src="img/partners-2/TajInvest.jpg" alt="">
+                </a>
+                <a href="https://www.ukaiddirect.org/">
+                    <img src="img/partners-2/ukaid.jpg" alt="">
+                </a>
+                <a href="https://vatan-ict.tj/#up">
+                    <img src="img/partners-2/Vatan-Ikt.jpg" alt="">
+                </a>
+                <a href="https://akf.org/">
+                    <img src="img/partners-2/AGA-KHAN-FOUNDATION.jpg" alt="">
+                </a>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer-body">
+            <div class="footer-logo">
+            <div>
+                <img src="img/Footer-logo-smartCity.png" alt="">
+            </div>
+            <div class="footer-title">
+                <h3 class="contacts">Контакты</h3>
+                <p class="info-text">Исполнительный орган государственной <br/>
+                    власти города Душанбе. Государственное <br/>
+                    унитарное предприятие «Умный город». <br/>
+                    Адрес: Улица М. Курбонов 25.</p>
+                    <div class="footer-contacts">
+                        <p>Тел./Факс:</p>
+                        <a href="tel:+992(37)2274745">+992 (37) 2274745,</a>
+                        <a href="tel:(+992)987322020">(+992) 987 32 20 20</a>
+                    </div>
+                    <div class="footer-email">
+                        <p>Эл. почта:</p>
+                        <a href="mailto:info@dsc.tj">info@dsc.tj</a>
+                    </div>
+            </div>
+        </div>
+        <div class="footer-menu">
+            <h3>Меню</h3>
+            <div>
+                <a href="">Руководство</a>
+                <a href="">Тендеры</a>
+                <a href="">Мероприятия</a>
+                <a href="">Вакансии</a>
+                <a href="">Партнеры</a>
+                <a href="">Наши проекты</a>
+                <a href="">Проект УРГД</a>
+            </div>
+        </div>
+        <div class="footer-socials">
+            <h3>Социальные сети</h3>
+            <a href="">
+                <img src="img/icon/iconTelegram.svg" alt="">
+            </a>
+            <a href="">
+                <img src="img/icon/iconFacebook.svg" alt="">
+            </a>
+            <a href="">
+                <img src="img/icon/iconLinkedin.svg" alt="">
+            </a>
+        </div> 
+        </div>
+
+        <div class="footer-content">
+            <p>© 2019-2026 "Умный город". Все права защищены.</p>
+        </div>
+
+    </footer>
+</body>
+</html>
