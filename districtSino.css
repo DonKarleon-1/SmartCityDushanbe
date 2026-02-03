@@ -193,15 +193,17 @@ button{
     margin-bottom: 50px;
 }
 
+.chairman-info {
+    text-align: center;
+}
+
 .chairman-info h1{
     font-size: 48px;
     line-height: 2;
-    text-align: center;
 }
 
 .chairman-info p{
     line-height: 2;
-    text-align: center;
     font-size: 28px;
 }
 
@@ -212,6 +214,7 @@ button{
 .first-paragraph, .second-parag, .third-parag, .fourth-parag, .fifth-parag, .sixth-parag{
     margin-bottom: 30px;
     font-size: 28px;
+    text-align: center;
 }
 
 .government-executive{
