@@ -41,7 +41,7 @@ ul,li{
 
 button{
     border: none;
-    background-color: white;
+    background-color: transparent;
     cursor: pointer;
 }
 
@@ -58,6 +58,13 @@ button{
 
     --border-radius-small: 10px;
 
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
 }
 
 .header-up{
@@ -163,14 +170,14 @@ button{
 
 .main-body{
     width: 100%;
-    height: 280vh;
+    height: auto;
     max-width: 1200px;
     border-radius: 30px;
     margin: 0 auto;
     margin-top: 50px;
     transition-duration: .2s;
     margin-bottom: 50px;
-    padding-inline: 40px;
+    padding: 40px 70px;
 }
 
 .main-body:hover{
@@ -179,22 +186,21 @@ button{
 }
 
 .main-header{
-    padding-top: 70px;
     text-align: center;
     line-height: 2;
 }
 
 .main-header h1{
-    font-size: 48px;
+    font-size: 32px;
 }
 
 .main-header .info{
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 50px;
 }
 
 .chairman-info h1{
-    font-size: 36px;
+    font-size: 34px;
     line-height: 2;
     text-align: center;
 }
@@ -217,8 +223,8 @@ button{
 
 .first-paragraph, .second-parag, .third-parag, .fourth-parag, .fifth-parag, .sixth-parag{
     margin-bottom: 30px;
-    font-size: 24px;
-    text-align: center;
+    font-size: 20px;
+    text-align: justify;
 }
 
 .government-executive{
@@ -227,11 +233,11 @@ button{
 }
 
 .government-executive p{
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .government-executive h1{
-    font-size: 36px;
+    font-size: 30px;
     color: #2C3E50;
 }
 
@@ -244,7 +250,7 @@ button{
 .news{
     max-width: 1200px;
     width: 100%;
-    height: 50vh;
+    height: auto;
     margin: 0 auto;
     transition-duration: .2s;
     margin-bottom: 50px;
@@ -259,18 +265,18 @@ button{
 
 .news-title{
     margin-bottom: 20px;
-    font-size: 26px;
+    font-size: 24px;
 }
 
 .news-first-description, .news-second-description, .news-third-description, .news-fourth-description, .news-fifth-description{
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .city-slogan{
     max-width: 1200px;
     width: 100%;
-    height: 8vh;
+    height: auto;
     margin: 0 auto;
     transition-duration: .2s;
     margin-bottom: 50px;
@@ -288,7 +294,7 @@ button{
 }
 
 .city-slogan p {
-    font-size: 24px;
+    font-size: 22px;
     margin-left: 15px;
 }
 
@@ -315,7 +321,7 @@ button{
 
 .leader-title{
     width: 100%;
-    height: 20vh;
+    height: auto;
     background-color: white;
     position: absolute;
     bottom: 0;
@@ -324,18 +330,19 @@ button{
 
 .leader-title p{
     margin: 40px;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 .circle-badge {
     width: 70%;
-    height: 50vh;
+    height: auto;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 150px;
     margin-bottom: 50px;
+    padding-block: 30px;
 }
 
 .circle-badge div{
@@ -347,7 +354,7 @@ button{
 
 .footer{ 
     width: 100%;
-    height: 40vh;
+    height: auto;
     margin-top: 70px;
     border-top: 1px solid rgba(0,0,0,0.1);
 }
@@ -355,10 +362,11 @@ button{
 .footer-body{
     gap: 40px;
     width: 100%;
-    height: 40vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding-block: 40px;
 }
 
 .footer-logo{
@@ -440,10 +448,11 @@ button{
 
 .footer-content{
     width: 100%;
-    height: 8vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     border-top: 1px solid rgba(0,0,0,0.1);
     color: gray;
+    padding-block: 20px;
 }

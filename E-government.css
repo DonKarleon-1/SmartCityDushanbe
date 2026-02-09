@@ -21,10 +21,6 @@
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'PT Serif';
-    color: #1A252F;
-}
-p{
-    color: #1A252F;
 }
 
 p,a, button {
@@ -73,6 +69,11 @@ button{
     justify-content: space-around;
     padding-block: 15px;
     border-bottom: 1px solid #e0e0e0;
+}
+
+.header-logo img{
+    width: 220px;
+    height: 80px;
 }
 
 .header-menu {
@@ -167,85 +168,40 @@ button{
     transform: translateY(0);
 }
 
-
-.main-body{
+.main-e-government-body {
     width: 100%;
-    height: auto;
     max-width: 1200px;
-    border-radius: 30px;
+    height: auto;
     margin: 0 auto;
-    margin-top: 50px;
     transition-duration: .2s;
-    margin-bottom: 50px;
-    padding: 40px 70px;
+    border-radius: 30px;
+    padding-block: 40px;
+    margin-block: 50px;
 }
 
-.main-body:hover{
+.main-e-government-body:hover{
     transition-duration: .2s;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
 }
 
-.main-header{
-    text-align: center;
-    line-height: 2;
-}
-
-.main-header h1{
-    font-size: 40px;
-}
-
-.main-header .info{
-    font-size: 24px;
-    margin-bottom: 50px;
-}
-
-.chairman-info h1{
-    font-size: 36px;
-    line-height: 2;
-    text-align: center;
-}
-
-.chairman-info p{
-    line-height: 2;
-    text-align: center;
-    font-size: 28px;
-}
-
-.image-chairman{
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.biograpghy-chairman{
-    line-height: 1.7;
-}
-
-.first-paragraph, .second-parag, .third-parag, .fourth-parag, .fifth-parag, .sixth-parag{
+.main-e-government-body h4, p:not(footer p, .news p, .city-slogan p, .national-leader p){
+    padding-inline: 35px;
     margin-bottom: 30px;
-    font-size: 20px;
-    text-align: justify;
-}
-
-.government-executive{
-    margin-top: 50px;
-    line-height: 3;
-}
-
-.government-executive p{
     font-size: 22px;
+    color: #1A252F;
 }
 
-.government-executive h1{
-    font-size: 30px;
-    color: #2C3E50;
+.main-e-government-body h1, h2 {
+    margin-bottom: 40px;
+    color: #1A252F;
+    text-align: center;
 }
 
-.government-place{
-    color: #2C3E50;
-    font-size: 24px;
+.main-e-government-body img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
-
 
 .news{
     max-width: 1200px;
@@ -265,12 +221,12 @@ button{
 
 .news-title{
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 26px;
 }
 
 .news-first-description, .news-second-description, .news-third-description, .news-fourth-description, .news-fifth-description{
     margin-bottom: 20px;
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .city-slogan{
@@ -330,7 +286,7 @@ button{
 
 .leader-title p{
     margin: 40px;
-    font-size: 22px;
+    font-size: 26px;
 }
 
 .circle-badge {

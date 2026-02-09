@@ -37,7 +37,7 @@ ul,li{
 
 button{
     border: none;
-    background-color: white;
+    background-color: transparent;
     cursor: pointer;
 }
 
@@ -54,6 +54,13 @@ button{
 
     --border-radius-small: 10px;
 
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
 }
 
 .header-up{
@@ -354,7 +361,7 @@ button{
 
 .footer{ 
     width: 100%;
-    height: 40vh;
+    height: auto;
     margin-top: 70px;
     border-top: 1px solid rgba(0,0,0,0.1);
 }
@@ -362,10 +369,11 @@ button{
 .footer-body{
     gap: 40px;
     width: 100%;
-    height: 40vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding-block: 40px;
 }
 
 .footer-logo{
@@ -447,14 +455,14 @@ button{
 
 .footer-content{
     width: 100%;
-    height: 8vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     border-top: 1px solid rgba(0,0,0,0.1);
     color: gray;
+    padding-block: 20px;
 }
-
 @media (max-width: 576px) {
 
 }
