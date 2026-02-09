@@ -56,6 +56,12 @@ button{
 
 }
 
+.header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 1;
+}
 
 .header-up{
     display: flex;
