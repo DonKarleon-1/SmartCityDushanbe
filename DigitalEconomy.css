@@ -21,13 +21,9 @@
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'PT Serif';
-    color: #1A252F;
-}
-p{
-    color: #1A252F;
 }
 
-p,a, button {
+p,a, button, ul li, ol li {
     font-family: 'PT Sans';
 }
 
@@ -51,6 +47,7 @@ button{
     --color-black: #000;
     --color-white: #000;
     --color-dark-blue: #003580;
+    --color-deep-blue: #1A252F;
 
     --circle: 50%;
 
@@ -61,12 +58,13 @@ button{
 }
 
 .header {
+    width: 100%;
+    height: auto;
     position: sticky;
     top: 0;
     background-color: rgba(255, 255, 255, 0.95);
-    z-index: 1;
+    z-index: 9999;
 }
-
 
 .header-up{
     display: flex;
@@ -74,6 +72,11 @@ button{
     justify-content: space-around;
     padding-block: 15px;
     border-bottom: 1px solid #e0e0e0;
+}
+
+.header-logo img{
+    width: 220px;
+    height: 80px;
 }
 
 .header-menu {
@@ -202,7 +205,7 @@ button{
 }
 
 
-.main-body{
+.digital-economy{
     width: 100%;
     height: auto;
     max-width: 1200px;
@@ -210,76 +213,155 @@ button{
     margin: 0 auto;
     margin-top: 50px;
     transition-duration: .2s;
-    margin-bottom: 50px;
-    padding: 40px 70px;
+    padding-block: 20px;
 }
 
-.main-body:hover{
+.digital-economy:hover {
     transition-duration: .2s;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
 }
 
-.main-header{
-    text-align: center;
-    line-height: 2;
-}
-
-.main-header h1{
+.digital-economy h1{
     font-size: 40px;
-}
-
-.main-header .info{
-    font-size: 24px;
-    margin-bottom: 40px;
-}
-
-.chairman-info h1{
-    font-size: 36px;
-    line-height: 2;
     text-align: center;
+    margin-bottom: 25px;
+    color: var(--color-deep-blue);
 }
 
-.chairman-info p{
-    line-height: 2;
-    text-align: center;
-    font-size: 28px;
-}
-
-.image-chairman{
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 50px;
-}
-
-.biograpghy-chairman{
-    line-height: 1.7;
-}
-
-.first-paragraph, .second-parag, .third-parag, .fourth-parag, .fifth-parag, .sixth-parag, .seventh-parag{
-    margin-bottom: 30px;
-    font-size: 20px;
-    text-align: justify;
-}
-
-.government-executive{
-    margin-top: 50px;
-    line-height: 3;
-}
-
-.government-executive p{
-    font-size: 22px;
-}
-
-.government-executive h1{
-    font-size: 30px;
-    color: #2C3E50;
-}
-
-.government-place{
-    color: #2C3E50;
+.digital-economy h3{
+    color: var(--color-deep-blue);
+    padding: 10px 50px;
     font-size: 24px;
 }
 
+.digital-economy p {
+    color: var(--color-deep-blue);
+    padding-inline: 50px;
+    padding-bottom: 7px;
+    font-size: 24px;
+    letter-spacing: 0.3px;
+}
+
+.digital-economy img {
+    padding-block: 15px;
+}
+
+.digital-economy-overview ol{
+    list-style-type: none;
+    list-style-position: inside;
+    counter-reset: item;
+    padding-left: 0;
+}
+
+.digital-economy-overview li {
+    color: var(--color-deep-blue);
+    font-size: 24px;
+    padding-inline: 60px;
+    counter-increment: item;
+}
+
+.digital-economy-overview li::before{
+    content: counter(item) ") ";
+    font-weight: 500;
+}
+
+.section-digital-economy-intro h4{
+    font-size: 24px;
+    padding: 15px 50px;
+    color: #0190F6;
+}
+
+.advantages {
+    width: 100%;
+    height: 615px;
+    background-image: url(img/DigitalEconomy/Meeting.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.advantages-title {
+    width: 100%;
+    height: auto;
+    background-color: #0190F6;
+}
+
+.advantages-title ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.advantages-title li {
+    position: relative;
+    color: white;
+    padding: 10px 45px;
+    font-size: 24px;
+}
+
+.advantages-title li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.advantages-growth {
+    width: 100%;
+    height: 615px;
+    background-image: url(img/DigitalEconomy/growth.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.advantages-cost {
+    width: 100%;
+    height: 615px;
+    background-image: url(img/DigitalEconomy/CostReduction.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.advantages-company {
+    width: 100%;
+    height: 615px;
+    background-image: url(img/DigitalEconomy/CreateNewplace.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.advantages-emptyPocket {
+    width: 100%;
+    height: 615px;
+    background-image: url(img/DigitalEconomy/EmptyPocket.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+}
 
 .news{
     max-width: 1200px;
@@ -490,3 +572,5 @@ button{
     color: gray;
     padding-block: 20px;
 }
+
+

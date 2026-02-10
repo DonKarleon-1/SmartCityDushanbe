@@ -80,17 +80,50 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .header-language-toggle{
     display: flex;
-    gap: 10px;
     font-size: 20px;
+    gap: 5px;
 }
 .header-language-toggle button{
+    width: 60px;
+    height: 30px;
     font-size: 13px;
     color: var(--color-atomic-gray);
+    border-radius: 30px;
+    transition-duration: .2s;
+}
+
+.header-language-toggle button:focus{
+    background-color: #003580;
+    color: white;
+    transition-duration: .2s;
+}
+
+.header-text-size button{
+    width: 45px;
+    height: 30px;
+    font-size: 13px;
+    color: var(--color-atomic-gray);
+    border-radius: 30px;
+    transition-duration: .2s;
+}
+
+.header-text-size button:focus{
+    background-color: #003580;
+    color: white;
+    transition-duration: .2s;
+}
+
+.header-social img{
+    transition-duration: .2s;
+}
+
+.header-social img:hover {
+    transform: scale(1.3);
 }
 
 .header-input{
