@@ -108,37 +108,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const slider = document.getElementById('fontSlider');
     const sizeValue = document.getElementById('sizeValue');
 
-    // Функция смены размера
     function updateFontSize(size) {
-        // Устанавливаем переменную для всего сайта
         document.documentElement.style.setProperty('--main-size', size + 'px');
         
-        // Обновляем визуальные данные в меню
         sizeValue.innerText = size + 'px';
         slider.value = size;
 
-        // Сохраняем в локальное хранилище
         localStorage.setItem('userFontSize', size);
     }
 
-    // 1. При загрузке страницы проверяем, есть ли сохраненный размер
     const savedSize = localStorage.getItem('userFontSize');
     if (savedSize) {
         updateFontSize(savedSize);
     }
 
-    // 2. Логика открытия/закрытия меню
     sizeBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         dropdown.classList.toggle('active');
     });
-
-    // 3. Изменение размера при движении ползунка
+    
     slider.addEventListener('input', (e) => {
         updateFontSize(e.target.value);
     });
 
-    // Закрытие меню при клике в пустом месте
     document.addEventListener('click', (e) => {
         if (!dropdown.contains(e.target) && e.target !== sizeBtn) {
             dropdown.classList.remove('active');
