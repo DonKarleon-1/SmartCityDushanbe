@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Economy</title>
     <link rel="stylesheet" href="DigitalEconomy.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -27,8 +28,16 @@
                     </ul>
                 </div>
 
-                <div class="header-text-size">
+                <div class="header-text-size no-resize">
                     <button class="text-size">Aa</button>
+                    
+                    <div class="size-dropdown" id="sizeDropdown">
+                        <span class="label">Размер текста</span>
+                        <div class="slider-container">
+                            <input type="range" id="fontSlider" min="14" max="30" value="16">
+                            <span id="sizeValue">16px</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="header-socials">
@@ -43,9 +52,13 @@
                     </a>
                 </div>
 
-                <div class="header-input">
-                    <input type="text">
-                    <img src="./img/icon/icon-search.svg" alt="" width="20" height="20" loading="lazy">
+                <div class="header-input-wrapper">
+                    <div class="header-input">
+                        <input type="text" id="localSearchInput" placeholder="Поиск на странице..." autocomplete="off">
+                        <img src="./img/icon/icon-search.svg" alt="" width="20" height="20" loading="lazy">
+                    </div>
+
+                    <div class="search-results-dropdown" id="localSearchResults"></div>
                 </div>
 
                 <div class="themes">
