@@ -315,17 +315,6 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
     margin-left: 1rem;
 }
 
-
-.header-input input {
-    color: var(--text-color) !important;
-}
-
-.search-results-dropdown {
-    background-color: var(--bg-color) !important;
-    border-color: var(--input-border) !important;
-    color: var(--text-color) !important;
-}
-
 .search-item:hover {
     background-color: rgba(128, 128, 128, 0.1) !important;
 }
