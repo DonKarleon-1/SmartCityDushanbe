@@ -458,7 +458,7 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
 
 
 .news{
-    width: 100%;
+    width: 80%;
     height: auto;
     margin: 0 auto;
     transition-duration: .2s;
