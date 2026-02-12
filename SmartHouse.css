@@ -378,158 +378,94 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
     transform: translateY(0);
 }
 
-.digital-economy{
+.smart-house {
     width: 80%;
     height: auto;
-    border-radius: 30px;
     margin: 0 auto;
     margin-top: 50px;
-    margin-bottom: 50px;
     transition-duration: .2s;
-    padding-block: 20px;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    padding-block: 50px;
 }
 
-.digital-economy:hover {
+.smart-house:hover{
     transition-duration: .2s;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.3);
 }
 
-.digital-economy h1{
-    font-size: 40px;
+.smart-house h1 {
     text-align: center;
+    color: var(--color-dark-gray-blue);
+    font-size: 40px;
     margin-bottom: 25px;
-    color: var(--color-deep-blue);
 }
 
-.digital-economy h3{
-    color: var(--color-deep-blue);
-    padding: 10px 50px;
-    font-size: 24px;
-}
-
-.digital-economy p {
-    color: var(--color-deep-blue);
+.smart-house h2{
     padding-inline: 50px;
-    padding-bottom: 7px;
     font-size: 24px;
+    color: var(--color-dark-gray-blue);
     letter-spacing: 0.3px;
+    font-weight: 900;
 }
 
-.digital-economy img {
+.smart-house ul {
     padding-block: 15px;
 }
 
-.digital-economy-overview ol{
-    list-style-type: none;
+.smart-house ul li {
+    padding-inline: 65px;
+    color: var(--color-dark-gray-blue);
+    font-size: 24px;
+    list-style-type: disc;
     list-style-position: inside;
-    counter-reset: item;
-    padding-left: 0;
+    letter-spacing: 0.3px;
 }
 
-.digital-economy-overview li {
-    color: var(--color-deep-blue);
-    font-size: 24px;
-    padding-inline: 60px;
-    counter-increment: item;
+.smart-house p {
+    font-size: 24px; 
+    color: var(--color-dark-gray-blue);
+    padding-inline: 50px;
+    margin-block: 10px;
+    letter-spacing: 0.3px;
 }
 
-.digital-economy-overview li::before{
-    content: counter(item) ") ";
-    font-weight: 500;
-}
-
-.section-digital-economy-intro h4{
-    font-size: 24px;
-    padding: 15px 50px;
+.smart-house span{
     color: #0190F6;
+    font-size: 24px;
 }
 
-.advantages {
+.smart-house img{
     width: 100%;
-    height: 615px;
-    background-image: url(img/DigitalEconomy/Meeting.png);
+    height: auto;
+    margin-block: 10px;
+}
+
+.block-image {
+    width: 100%;
+    height: 80vh;
+    background-image: url(img/smartHouse/Man.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    align-items: end;
-    margin-bottom: 20px;
+    position: relative;
 }
 
-.advantages-title {
+.block-image .image-title{
     width: 100%;
     height: auto;
     background-color: #0190F6;
-}
-
-.advantages-title ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.advantages-title li {
-    position: relative;
-    color: white;
-    padding: 10px 45px;
-    font-size: 24px;
-}
-
-.advantages-title li::before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    background-color: white;
-    border-radius: 50%;
     position: absolute;
-    left: 25px;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 0;
 }
 
-
-.advantages-growth {
-    width: 100%;
-    height: 615px;
-    background-image: url(img/DigitalEconomy/growth.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: end;
+.block-image .image-title li {
+    color: white !important;
 }
 
-.advantages-cost {
-    width: 100%;
-    height: 615px;
-    background-image: url(img/DigitalEconomy/CostReduction.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.highlight{
     display: flex;
-    align-items: end;
-}
-
-.advantages-company {
-    width: 100%;
-    height: 615px;
-    background-image: url(img/DigitalEconomy/CreateNewplace.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: end;
-}
-
-.advantages-emptyPocket {
-    width: 100%;
-    height: 615px;
-    background-image: url(img/DigitalEconomy/EmptyPocket.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: end;
+    justify-content: center;
 }
 
 .news{
@@ -584,7 +520,7 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
 
 .national-leader{
     width: 80%;
-    height: 80vh;
+    height: 100vh;
     margin: 0 auto;
     transition-duration: .2s;
     margin-bottom: 50px;
@@ -738,5 +674,3 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
     color: gray;
     padding-block: 20px;
 }
-
-

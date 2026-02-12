@@ -30,6 +30,7 @@ p,a, button {
 
 a{
     text-decoration: none;
+    font-size: var(--main-size, 16px);
 }
 ul,li{
     list-style: none;
@@ -71,12 +72,18 @@ body {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.header-up{
+.header-top{
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding-block: 15px;
     border-bottom: 1px solid #e0e0e0;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .header-logo img{
@@ -196,10 +203,6 @@ body {
     gap: 10px;
 }
 
-p, a, span, h1, h2, h3, h4, h5, h6 {
-    font-size: var(--main-size, 16px);
-}
-
 h1 { font-size: calc(var(--main-size, 16px) * 2); }
 h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
 
@@ -213,22 +216,19 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
 
 .header-input-wrapper {
     position: relative;
-    width: 200px;
 }
 
 .header-input {
     position: relative;
-    width: 100%;
 }
 
 .header-input input {
-    width: 100%;
-    padding: 10px 10px;
     border-radius: 20px;
     border: 1px solid #ddd;
     outline: none;
     transition: all 0.2s;
     background: #f8f9fa;
+    padding: 10px 10px;
 }
 
 .header-input input:focus {
@@ -239,14 +239,12 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
 
 .header-input img {
     position: absolute;
-    right: 0;
     top: 50%;
+    right: 10px;
     transform: translateY(-50%);
-    right: 0;
-    opacity: 0.6;
+    opacity: 0.5;
     pointer-events: none;
 }
-
 
 .search-results-dropdown {
     position: absolute;
@@ -309,27 +307,29 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
 
 .themes {
     cursor: pointer;
-    padding: 10px;
+    padding: 5px;
     border-radius: 50%;
     transition: background 0.3s;
     color: var(--icon-fill);
-    margin-left: 1rem;
 }
 
 .search-item:hover {
     background-color: rgba(128, 128, 128, 0.1) !important;
 }
 
-.header-menu-list{
+.header-main {
+    padding: 20px 10px;
+}
+
+.header-menu-list {
+    padding-inline: 140px;
     display: flex;
-    align-items: center;
-    gap: 40px;
-    margin-left: 13%;
+    justify-content: space-evenly;
+    gap: 20px;
 }
 
 .header-menu-item{
     font-size: 16px;
-    padding: 15px 5px;
 }
 
 .header-menu-item a{
@@ -348,12 +348,12 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
     padding-inline: 10px;
 }
 
-.header-bottom .header-bottom-menu .header-menu-list .header-menu-item {
+.header-main .header-main-menu .header-menu-list .header-menu-item {
     position: relative;
     float: left;
 }
 
-.header-bottom-menu .header-menu-list .header-menu-item > ul{
+.header-main-menu .header-menu-list .header-menu-item > ul{
     position: absolute;
     left: 0;
     width: 220px;
@@ -368,11 +368,11 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
     background-color: white;
 }
 
-.header-bottom .header-bottom-menu .header-menu-list .header-menu-item ul li{
+.header-main .header-main-menu .header-menu-list .header-menu-item ul li{
     width: 100%;
 }
 
-.header-bottom-menu .header-menu-list .header-menu-item:hover > ul{
+.header-main-menu .header-menu-list .header-menu-item:hover > ul{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -380,9 +380,8 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
 
 
 .main-body{
-    width: 100%;
+    width: 80%;
     height: auto;
-    max-width: 1200px;
     border-radius: 30px;
     margin: 0 auto;
     margin-top: 50px;
@@ -459,8 +458,7 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
 
 
 .news{
-    max-width: 1200px;
-    width: 100%;
+    width: 80%;
     height: auto;
     margin: 0 auto;
     transition-duration: .2s;
@@ -485,8 +483,7 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
 }
 
 .city-slogan{
-    max-width: 1200px;
-    width: 100%;
+    width: 80%;
     height: auto;
     margin: 0 auto;
     transition-duration: .2s;
@@ -511,9 +508,8 @@ h2 { font-size: calc(var(--main-size, 16px) * 1.5); }
 
 
 .national-leader{
-    max-width: 1200px;
-    width: 100%;
-    height: 90vh;
+    width: 80%;
+    height: 80vh;
     margin: 0 auto;
     transition-duration: .2s;
     margin-bottom: 50px;
