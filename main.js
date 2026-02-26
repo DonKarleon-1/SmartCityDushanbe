@@ -64,21 +64,29 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class="search-item-context">${highlightedSnippet}</div>
                 `;
 
-                div.addEventListener('click', () => {
-                    match.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
-                    match.element.style.transition = 'background 0.5s';
-                    const originalBg = match.element.style.backgroundColor;
-                    match.element.style.backgroundColor = '#fff3cd';
-                    
-                    setTimeout(() => {
-                        match.element.style.backgroundColor = originalBg;
-                    }, 1500);
+                        div.addEventListener('click', () => {
+                match.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // плавный переход для фона и текста
+                match.element.style.transition = 'background 0.5s, color 0.5s';
 
-                    resultsContainer.style.display = 'none';
-                    input.value = '';
-                });
+                // сохраняем исходные стили
+                const originalBg = match.element.style.backgroundColor;
+                const originalColor = match.element.style.color;
 
+                // применяем подсветку
+                match.element.style.backgroundColor = '#007bff'; // синий фон
+                match.element.style.color = '#ffffff';           // белый текст
+
+                // через 1.5 секунды возвращаем исходные стили
+                setTimeout(() => {
+                    match.element.style.backgroundColor = originalBg;
+                    match.element.style.color = originalColor;
+                }, 1500);
+
+                resultsContainer.style.display = 'none';
+                input.value = '';
+            });
                 resultsContainer.appendChild(div);
             });
             resultsContainer.style.display = 'block';
@@ -102,38 +110,115 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const sizeBtn = document.querySelector('.text-size');
-    const dropdown = document.getElementById('sizeDropdown');
-    const slider = document.getElementById('fontSlider');
-    const sizeValue = document.getElementById('sizeValue');
 
-    function updateFontSize(size) {
-        document.documentElement.style.setProperty('--main-size', size + 'px');
-        
-        sizeValue.innerText = size + 'px';
-        slider.value = size;
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
+});
 
-        localStorage.setItem('userFontSize', size);
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+
+
+const themeBtn = document.getElementById("themeToggleBtn");
+const body = document.body;
+const moonIcon = document.getElementById("moonIcon");
+const sunIcon = document.getElementById("sunIcon");
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+        moonIcon.style.display = "none";
+        sunIcon.style.display = "block";
     }
 
-    const savedSize = localStorage.getItem('userFontSize');
-    if (savedSize) {
-        updateFontSize(savedSize);
-    }
+    themeBtn.addEventListener("click", () => {
+        body.classList.toggle("dark-theme");
 
-    sizeBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        dropdown.classList.toggle('active');
-    });
-    
-    slider.addEventListener('input', (e) => {
-        updateFontSize(e.target.value);
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!dropdown.contains(e.target) && e.target !== sizeBtn) {
-            dropdown.classList.remove('active');
+        if (body.classList.contains("dark-theme")) {
+            localStorage.setItem("theme", "dark");
+            moonIcon.style.display = "none";
+            sunIcon.style.display = "block";
+        } else {
+            localStorage.setItem("theme", "light");
+            moonIcon.style.display = "block";
+            sunIcon.style.display = "none";
         }
     });
+});
+
+const toggleMenu = document.getElementById('toggleMenu');
+const textSizeDropdown = document.getElementById('textSizeDropdown');
+const textSizeSlider = document.getElementById('textSizeSlider');
+const sliderValue = document.getElementById('sliderValue');
+
+// Открытие/закрытие выпадающего меню
+toggleMenu.addEventListener('click', () => {
+    textSizeDropdown.style.display = textSizeDropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+// Получаем все текстовые элементы, кроме кнопки и input
+function getAllTextElements(root) {
+    const elements = [];
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT, {
+        acceptNode: (node) => {
+            if (node.id === 'toggleMenu' || node.tagName.toLowerCase() === 'input') {
+                return NodeFilter.FILTER_REJECT;
+            }
+            return NodeFilter.FILTER_ACCEPT;
+        }
+    });
+    let currentNode = walker.nextNode();
+    while (currentNode) {
+        elements.push(currentNode);
+        currentNode = walker.nextNode();
+    }
+    return elements;
+}
+
+const textElements = getAllTextElements(document.body);
+
+// Сохраняем исходный размер текста каждого элемента
+textElements.forEach(el => {
+    const style = window.getComputedStyle(el).fontSize.replace('px','');
+    el.dataset.originalSize = style; // хранится как строка
+});
+
+// Функция установки размера текста относительно исходного
+function setTextSize(px) {
+    sliderValue.textContent = px + 'px';
+    textElements.forEach(el => {
+        const original = parseFloat(el.dataset.originalSize);
+        if (px == 16) {
+            el.style.fontSize = original + 'px'; // если 16, оставляем исходный
+        } else {
+            el.style.fontSize = px + 'px';
+        }
+    });
+    localStorage.setItem('textSize', px);
+}
+
+// Загружаем сохраненный размер
+const savedSize = localStorage.getItem('textSize');
+if (savedSize) {
+    textSizeSlider.value = savedSize;
+    setTextSize(savedSize);
+} else {
+    setTextSize(textSizeSlider.value);
+}
+
+// Обновление при движении ползунка
+textSizeSlider.addEventListener('input', () => {
+    setTextSize(textSizeSlider.value);
 });

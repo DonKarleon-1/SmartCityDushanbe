@@ -26,17 +26,12 @@
                 </div>
 
                 <div class="header-text-size no-resize">
-                    <button class="text-size">Aa</button>
-                    
-                    <div class="size-dropdown" id="sizeDropdown">
-                        <span class="label">Размер текста</span>
-                        <div class="slider-container">
-                            <input type="range" id="fontSlider" min="14" max="30" value="16">
-                            <span id="sizeValue">16px</span>
-                        </div>
+                    <button class="text-size" id="toggleMenu">Aa</button>
+                    <div id="textSizeDropdown" class="dropdown">
+                        <input type="range" id="textSizeSlider" min="16" max="30" value="16">
+                        <span id="sliderValue">16px</span>
                     </div>
                 </div>
-
                 <div class="header-socials">
                     <a href="" class="header-social">
                         <img src="img/icon/iconTelegram.svg" alt="Telegram" width="27" height="27" loading="lazy">
@@ -87,15 +82,15 @@
                         <a href="#">Умный Город</a>
                         <ul>
                             <li><a href="E-government.html">Электронное правительство</a></li>
-                            <li><a href="#">Умная экология</a></li>
+                            <li><a href="smartEcology.html">Умная экология</a></li>
                             <li><a href="SmartHouse.html">Умный дом</a></li>
                             <li><a href="DigitalEconomy.html">Цифровая экономика</a></li>
-                            <li><a href="#">Умная безопасность</a></li>
+                            <li><a href="smartSecurity.html">Умная безопасность</a></li>
                             <li><a href="smartTransport.html">Умный транспорт</a></li>
                             <li><a href="smartEnergy.html">Умная энергия</a></li>
                             <li><a href="smartMedicine.html">Умная медицина</a></li>
-                            <li><a href="#">Цифровое образование</a></li>
-                            <li><a href="#">IT Park</a></li>
+                            <li><a href="smartEducation.html">Цифровое образование</a></li>
+                            <li><a href="https://it-park.tj/">IT Park</a></li>
                         </ul>
                     </li>
 
@@ -235,33 +230,31 @@
             </p>
         </div>
         </section>
+
         <section class="news">
             <div class="news-body">
                 <h6 class="news-title">Свежие записи</h6>
-                <p class="news-first-description">Встреча ГУП «Умный город» с компанией VINAFORE INFORMATICS AND
-                    TELECOMMUNICATION JSC</p>
-                <p class="news-second-description">Как таджикской компании открыть офис на рынном языке <br />
-                </p>
-                <p class="news-third-description">Встреча директора ГУП «Умный город» с Постоянным представителем
-                    Азиатского банка <br />
-                    развития в Республике Таджикистан</p>
-                <p class="news-fourth-description">Санпропин «Энергo» установит по 46 адресам в Москве до конца года</p>
-                <p class="news-fifth-description">В Москве открыт кабинет зарядка электромобилей с просунской
-                    способностью до 500 <br />
-                    машин в сутки</p>
+                <a href="#">Встреча ГУП «Умный город» с компанией VINAFORE INFORMATICS AND TELECOMMUNICATION JSC</a>
+                <a href="#">Как таджикской компании открыть офис на рынном языке
+                </a>
+                <a href="#">Встреча директора ГУП «Умный город» с Постоянным представителем Азиатского банка <br/>
+                    развития в Республике Таджикистан</a>
+                <a href="#">Санпропин «Энергo» установит по 46 адресам в Москве до конца года</a>
+                <a href="#">В Москве открыт кабинет зарядка электромобилей с просунской способностью до 500 <br/>
+                    машин в сутки</a>
             </div>
         </section>
 
         <section class="city-slogan">
             <div>
-                <p>Пойтахти Точикистон — шахри Душанбе оинаи тавризу зиндагии миллати точик ва <br />
+                <p>Пойтахти Точикистон — шахри Душанбе оинаи тавризу зиндагии миллати точик ва <br/> 
                     даъвати точикон аст.</p>
             </div>
         </section>
 
         <section class="national-leader">
             <div class="leader-title">
-                <p>Асосгузори сулҳу ваҳдати миллӣ — Пешвои миллат, Президенти<br />
+                <p>Асосгузори сулҳу ваҳдати миллӣ — Пешвои миллат, Президенти<br/>
                     Чумҳурии Точикистон муҳтарам Эмомалӣ Раҳмон</p>
             </div>
         </section>
@@ -331,5 +324,11 @@
         </div>
 
     </footer>
+
+        <button id="backToTop" class="back-to-top" title="Наверх">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
 </body>
 </html>
